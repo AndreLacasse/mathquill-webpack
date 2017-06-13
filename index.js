@@ -1,5 +1,5 @@
 window.jQuery = require('jquery');
-require('./mathquill.min.js');
+require('./mathquill.js');
 require('./mathquill.css');
 
 module.exports = window.MathQuill;
