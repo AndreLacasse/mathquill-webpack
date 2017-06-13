@@ -361,7 +361,7 @@ var Node = P(function(_) {
   _.isEmpty = function() {
     return this.ends[L] === 0 && this.ends[R] === 0;
   };
-  
+
   _.isStyleBlock = function() {
     return false;
   };
@@ -3477,6 +3477,8 @@ case '!':
 */
 
 //binary operators
+LatexCmds.geqslant = bind(VanillaSymbol, '\\geqslant', '&#10878;');
+LatexCmds.leqslant = bind(VanillaSymbol, '\\leqslant', '&#10877;');
 LatexCmds.diamond = bind(VanillaSymbol, '\\diamond ', '&#9671;');
 LatexCmds.bigtriangleup = bind(VanillaSymbol, '\\bigtriangleup ', '&#9651;');
 LatexCmds.ominus = bind(VanillaSymbol, '\\ominus ', '&#8854;');
@@ -3662,7 +3664,7 @@ LatexCmds.alef = LatexCmds.alefsym = LatexCmds.aleph = LatexCmds.alephsym =
 LatexCmds.xist = //LOL
 LatexCmds.xists = LatexCmds.exist = LatexCmds.exists =
   bind(VanillaSymbol,'\\exists ','&exist;');
-  
+
 LatexCmds.nexists = LatexCmds.nexist =
       bind(VanillaSymbol, '\\nexists ', '&#8708;');
 
@@ -4140,7 +4142,7 @@ var PlusMinus = P(BinaryOperator, function(_) {
 
       return 'mq-binary-operator';
     };
-    
+
     if (dir === R) return; // ignore if sibling only changed on the right
     this.jQ[0].className = determineOpClassType(this);
     return this;
